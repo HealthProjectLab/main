@@ -8,21 +8,6 @@ import { MdLogout, MdNotifications } from "react-icons/md";
 export default function Doctor({ name, pfp, doc }) {
   return (
     <div>
-      <nav className="p-10 flex justify-between">
-        <h1 className="text-2xl font-bold cursor-pointer hover:underline">
-          🧬 HealthHelp
-        </h1>
-        <div className="flex gap-6 text-md items-center">
-          <MdNotifications className="text-2xl text-blue-500" />
-          <button className="border border-dashed py-1 px-3 flex items-center gap-4 cursor-pointer">
-            Dinesh Battu
-            <span className="text-lg">
-              <MdLogout />
-            </span>
-          </button>
-        </div>
-      </nav>
-
       <div className="max-w-6xl mx-auto">
         <div className=" p-5  text-center  ">
           <div>
@@ -102,19 +87,35 @@ export default function Doctor({ name, pfp, doc }) {
           />
         </section>
 
-        <h1 className="text-2xl font-bold mt-3 underline">Clinic Location</h1>
+        <h1 className="text-2xl font-bold mt-6 underline">Clinic Location</h1>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15314.185606645533!2d81.05166134999999!3d16.346105200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361d8b1364907b%3A0x7871c8ce88b75c53!2sGudlavalleru%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1755750783188!5m2!1sen!2sin"
-          className="w-full h-[500px] border border-black my-3"
+          className="w-full h-[500px] border border-black my-8 "
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <h1 className="text-2xl font-bold mt-3 underline">Book Appointment</h1>
+        <h1 className="text-2xl font-bold mt-3 underline mb-3">
+          Book Appointment
+        </h1>
 
-        <form>
+        <form className="flex flex-col w-xl border border-black p-5 rounded-md mb-6">
           <label htmlFor="">Name: </label>
           <input type="text" className="border border-gray-500" />
+          <label htmlFor="">Age: </label>
+          <input type="age" className="border border-gray-500" />
+          <label htmlFor="">Gender: </label>
+          <select className="border border-gray-500">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label htmlFor="">Enter Date: </label>
+          <input type="date" className="border border-gray-500" />
+          <label htmlFor="">Enter Date: </label>
+          <input type="time" className="border border-gray-500" />
+          <button className="bg-gray-300 p-2 rounded-md cursor-pointer">
+            Submit
+          </button>
         </form>
       </div>
     </div>
