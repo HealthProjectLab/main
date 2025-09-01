@@ -4,6 +4,7 @@ import { FaMedal } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
 import { MdLogout, MdNotifications } from "react-icons/md";
+import { useWindowSize } from "react-use";
 
 export default function Doctor({ name, pfp, doc }) {
   return (
